@@ -1,4 +1,4 @@
-package com.bhat.springbootdemo;
+package com.bhat.employeeregistration;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

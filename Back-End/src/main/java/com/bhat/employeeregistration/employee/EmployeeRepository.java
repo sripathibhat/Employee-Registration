@@ -1,4 +1,4 @@
-package com.bhat.springbootdemo.employee;
+package com.bhat.employeeregistration.employee;
 
 import org.springframework.data.repository.CrudRepository;
 

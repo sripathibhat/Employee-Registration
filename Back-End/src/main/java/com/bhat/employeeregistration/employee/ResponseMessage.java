@@ -1,4 +1,4 @@
-package com.bhat.springbootdemo.employee;
+package com.bhat.employeeregistration.employee;
 
 public class ResponseMessage {
 	

@@ -1,4 +1,4 @@
-package com.bhat.springbootdemo.employee;
+package com.bhat.employeeregistration.employee;
 
 import java.util.ArrayList;
 import java.util.List;
