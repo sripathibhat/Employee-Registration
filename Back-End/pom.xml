@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bhat</groupId>
-	<artifactId>springbootdemo</artifactId>
+	<artifactId>employee-registration</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springbootdemo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>employee-registration</name>
+	<description>Employee Registration Back End</description>
 
 	<properties>
 		<java.version>1.8</java.version>

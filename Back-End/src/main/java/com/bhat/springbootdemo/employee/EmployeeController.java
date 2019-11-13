@@ -41,7 +41,7 @@ public class EmployeeController {
 	@RequestMapping(value="/employees/{empId}", method=RequestMethod.DELETE)
 	public ResponseEntity<?> deleteEmployee(@PathVariable int empId) {
 		if(empService.deleteEmployee(empId)) {
-			return new ResponseEntity<String>("Employee deleted successfully", HttpStatus.NO_CONTENT);
+			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		}
 		return new ResponseEntity<String>("Employee with ID = " + empId + " not found", HttpStatus.NOT_FOUND);
 	}
