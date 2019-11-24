@@ -34,16 +34,16 @@
 			<optional>true</optional>
 		</dependency>
 		
-		<!--dependency>
+		<dependency>
 			<groupId>org.apache.derby</groupId>
 			<artifactId>derby</artifactId>
 			<scope>runtime</scope>
-		</dependency-->
+		</dependency>
 		
-		<dependency>
+		<!-- dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-		</dependency>
+		</dependency-->
 		
 		<dependency>
 			<groupId>io.springfox</groupId>

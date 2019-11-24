@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -23,7 +24,7 @@ public class EmployeeService {
 	
 	public List<Employee> getEmployees() {
 		List<Employee> employees = new ArrayList<Employee>();
-		empRepository.findAll().forEach(employees::add);
+		empRepository.findAll(Sort.by(Sort.Direction.ASC, "firstName")).forEach(employees::add);
 		return employees;
 	}
 	

@@ -1,11 +1,14 @@
 package com.bhat.employeeregistration.employee;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class Employee {
@@ -16,10 +19,11 @@ public class Employee {
 	private String firstName;
 	private String lastName;
     private short gender;
-    private Date birthDate;;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate birthDate;;
     private String department;
 
-	public Employee(int empId, String firstName, String lastName, short gender, Date birthDate, String department) {
+	public Employee(int empId, String firstName, String lastName, short gender, LocalDate birthDate, String department) {
 		super();
 		this.empId = empId;
 		this.firstName = firstName;
@@ -66,11 +70,11 @@ public class Employee {
 		this.gender = gender;
 	}
 
-	public Date getBirthDate() {
+	public LocalDate getBirthDate() {
 		return birthDate;
 	}
 
-	public void setBirthDate(Date birthDate) {
+	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
 	}
 
