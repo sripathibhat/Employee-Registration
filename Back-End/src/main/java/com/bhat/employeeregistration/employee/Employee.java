@@ -1,6 +1,5 @@
 package com.bhat.employeeregistration.employee;
 
-import java.sql.Date;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
@@ -18,12 +17,12 @@ public class Employee {
 	private int empId;
 	private String firstName;
 	private String lastName;
-    private short gender;
+    private String gender;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthDate;;
     private String department;
 
-	public Employee(int empId, String firstName, String lastName, short gender, LocalDate birthDate, String department) {
+	public Employee(int empId, String firstName, String lastName, String gender, LocalDate birthDate, String department) {
 		super();
 		this.empId = empId;
 		this.firstName = firstName;
@@ -62,11 +61,11 @@ public class Employee {
 		this.lastName = lastName;
 	}
 
-	public short getGender() {
+	public String getGender() {
 		return gender;
 	}
 
-	public void setGender(short gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 
