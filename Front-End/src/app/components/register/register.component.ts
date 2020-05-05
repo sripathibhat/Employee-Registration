@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
   onSubmit(value: any) {
     console.log(value);
     let employee = new Employee();
-    employee.birthdDate = value.bday;
+    employee.email = value.email;
     employee.department = value.dept;
     employee.firstName= value.fname;
     employee.lastName = value.lname;
