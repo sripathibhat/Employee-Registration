@@ -21,8 +21,10 @@ public class Employee {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthDate;;
     private String department;
+    private String email;
 
-	public Employee(int empId, String firstName, String lastName, String gender, LocalDate birthDate, String department) {
+	public Employee(int empId, String firstName, String lastName, String gender, LocalDate birthDate, String department,
+			String email) {
 		super();
 		this.empId = empId;
 		this.firstName = firstName;
@@ -30,6 +32,7 @@ public class Employee {
 		this.gender = gender;
 		this.birthDate = birthDate;
 		this.department = department;
+		this.email = email;
 	}
 
 	public Employee() {
@@ -83,6 +86,14 @@ public class Employee {
 
 	public void setDepartment(String department) {
 		this.department = department;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }
