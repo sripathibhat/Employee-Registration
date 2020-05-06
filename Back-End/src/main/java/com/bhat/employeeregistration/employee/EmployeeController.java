@@ -1,5 +1,6 @@
 package com.bhat.employeeregistration.employee;
 
+import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,6 +23,7 @@ public class EmployeeController {
 	
 	@RequestMapping(value="/employees", method=RequestMethod.POST)
 	public ResponseEntity<?> createEmployee(@RequestBody Employee emp) {
+		emp.setPassword(Base64.getEncoder().encodeToString(emp.getPassword().getBytes()));
 		empService.createEmployee(emp);
 		return new ResponseEntity<String>("Employee created successfully", HttpStatus.CREATED);
 	}

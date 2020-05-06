@@ -2,50 +2,38 @@ package com.bhat.employeeregistration.employee;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class Employee {
-	
+
+	@Column(unique=true)
+    private String email;
+	private String password;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int empId;
 	private String firstName;
 	private String lastName;
-    private String gender;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate birthDate;;
-    private String department;
-    private String email;
 
-	public Employee(int empId, String firstName, String lastName, String gender, LocalDate birthDate, String department,
-			String email) {
+	public Employee(int empId, String firstName, String lastName, String password, String email) {
 		super();
-		this.empId = empId;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.gender = gender;
-		this.birthDate = birthDate;
-		this.department = department;
+		this.password = password;
 		this.email = email;
 	}
 
 	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-
-	public int getEmpId() {
-		return empId;
-	}
-
-	public void setEmpId(int empId) {
-		this.empId = empId;
 	}
 
 	public String getFirstName() {
@@ -64,28 +52,12 @@ public class Employee {
 		this.lastName = lastName;
 	}
 
-	public String getGender() {
-		return gender;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-
-	public LocalDate getBirthDate() {
-		return birthDate;
-	}
-
-	public void setBirthDate(LocalDate birthDate) {
-		this.birthDate = birthDate;
-	}
-
-	public String getDepartment() {
-		return department;
-	}
-
-	public void setDepartment(String department) {
-		this.department = department;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getEmail() {
@@ -94,6 +66,14 @@ public class Employee {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
 	}
 
 }
