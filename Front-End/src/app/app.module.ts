@@ -8,12 +8,16 @@ import { DatePipe } from '@angular/common';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RegisterComponent } from './components/register/register.component';
+import { SuccessComponent } from './components/success/success.component';
+import { FailureComponent } from './components/failure/failure.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
-    RegisterComponent
+    RegisterComponent,
+    SuccessComponent,
+    FailureComponent
   ],
   imports: [
     BrowserModule,

@@ -23,17 +23,18 @@ export class RegisterComponent implements OnInit {
     employee.department = value.dept;
     employee.firstName= value.fname;
     employee.lastName = value.lname;
-    employee.gender = value.gender;
+    employee.password = value.pwd;
     console.log('Employee', employee);
     this.employeeService.registerEmployee('employees', employee, { responseType: 'text'}).subscribe(
       (data) => {
         console.log(data);
+        this.router.navigate(['/success']);
       },
       (error) => {
         console.log(error);
+        this.router.navigate(['/failure']);
       }
     );
-    this.router.navigate(['/employees']);
   }
 
 }

@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register.component';
+import { SuccessComponent } from './components/success/success.component';
+import { FailureComponent } from './components/failure/failure.component';
 
 const appRoutes: Routes = [
     {
@@ -15,8 +17,16 @@ const appRoutes: Routes = [
         component: RegisterComponent
     },
     {
-        path: 'employees',
+        path: 'users',
         component: EmployeeComponent
+    },
+    {
+        path: 'success',
+        component: SuccessComponent
+    },
+    {
+        path: 'failure',
+        component: FailureComponent
     },
     {
         path: '**',

@@ -15,7 +15,7 @@ body {
   
   /* Full-width input fields */
   input[type=text], input[type=password], input[type=date], input[type=email] {
-    width: 100%;
+    width: 30%;
     padding: 15px;
     margin: 5px 0 22px 0;
     display: inline-block;
@@ -42,7 +42,7 @@ body {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 30%;
     opacity: 0.9;
   }
   
@@ -58,5 +58,9 @@ body {
   /* Set a grey background color and center the text of the "sign in" section */
   .signin {
     background-color: #f1f1f1;
+    text-align: center;
+  }
+
+  .center {
     text-align: center;
   }

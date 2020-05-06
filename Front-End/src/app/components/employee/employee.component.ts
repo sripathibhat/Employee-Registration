@@ -16,6 +16,7 @@ export class EmployeeComponent implements OnInit {
 
   ngOnInit() {
     console.log('Loading Employee Component');
+    this.employeesAvailable = false;
     this.employeeService.getEmployees('/employees').subscribe(
       (data: Employee[]) => {
         this.employeesAvailable = true;
